@@ -20,7 +20,7 @@ export interface Stat {
   id: number;
   value: string;
   label: string;
-  subLabel?: string;
+  subLabel?: string | string[];
 }
 
 export interface Testimonial {

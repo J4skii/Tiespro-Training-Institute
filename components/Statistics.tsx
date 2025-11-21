@@ -24,7 +24,17 @@ export const Statistics: React.FC = () => {
                     <div key={stat.id} className="bg-slate-50 p-6 rounded border-l-4 border-tiespro-orange shadow-sm">
                         <h4 className="text-3xl font-bold text-tiespro-navy font-display">{stat.value}</h4>
                         <p className="text-slate-800 font-bold text-sm uppercase mt-1">{stat.label}</p>
-                        {stat.subLabel && <p className="text-slate-500 text-xs mt-1">{stat.subLabel}</p>}
+                        {stat.subLabel && (
+                            <div className="text-slate-500 text-[10px] font-mono mt-2 space-y-1">
+                                {Array.isArray(stat.subLabel) ? (
+                                    stat.subLabel.map((line, index) => (
+                                        <p key={index} className="leading-tight">{line}</p>
+                                    ))
+                                ) : (
+                                    <p>{stat.subLabel}</p>
+                                )}
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>

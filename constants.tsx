@@ -118,8 +118,31 @@ export const SPECIALIZED_TRAINING: Service[] = [
 export const STATS: Stat[] = [
   { id: 1, value: '100%', label: 'Black Owned', subLabel: '60% Woman Owned (PDI)' },
   { id: 2, value: '18+', label: 'Years Experience', subLabel: 'Est. June 2005' },
-  { id: 3, value: 'TETA', label: 'Accredited', subLabel: 'TETA06-157' },
-  { id: 4, value: 'QCTO', label: 'Accredited', subLabel: 'AC-TTC250124162532' },
+  { 
+    id: 3, 
+    value: 'TETA', 
+    label: 'Teta 06-157',
+    subLabel: [ '  '] 
+  },
+  { 
+    id: 4, 
+    value: 'QCTO/SDP', 
+    label: 'Accredited', 
+    subLabel: [
+      '05-QCTO/SDP260224214016',
+      '05-QCTO/SDP140324142440'
+    ]
+  },
+  { 
+    id: 5, 
+    value: 'QCTO/AC', 
+    label: 'Accredited', 
+    subLabel: [
+      '05-QCTO/AC-TTC250124162532',
+      '05-QCTO/AC-TTC090125092206',
+      '05-QCTO/AC-TTC050224051012'
+    ] 
+  }
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
