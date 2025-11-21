@@ -10,7 +10,7 @@ export const Contact: React.FC = () => {
           
           <div className="space-y-8">
             <div>
-              <h2 className="text-tiespro-orange font-bold tracking-widest uppercase text-sm mb-2">Contact Us</h2>
+              <h2 className="text-tiespro-gold font-bold tracking-widest uppercase text-sm mb-2">Contact Us</h2>
               <h3 className="text-4xl font-display font-bold text-tiespro-navy mb-6">Get in Touch</h3>
               <p className="text-slate-600 text-lg">
                 Ready to upskill your workforce? Contact our accreditation specialists to discuss TETA compliant training plans.
@@ -18,7 +18,7 @@ export const Contact: React.FC = () => {
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-lg border border-slate-100 hover:border-tiespro-orange/50 transition-colors">
+              <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-lg border border-slate-100 hover:border-tiespro-gold/50 transition-colors">
                 <div className="p-3 bg-tiespro-navy text-white rounded-lg">
                   <Phone className="w-6 h-6" />
                 </div>
@@ -29,7 +29,7 @@ export const Contact: React.FC = () => {
                 </div>
               </div>
               
-              <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-lg border border-slate-100 hover:border-tiespro-orange/50 transition-colors">
+              <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-lg border border-slate-100 hover:border-tiespro-gold/50 transition-colors">
                 <div className="p-3 bg-tiespro-navy text-white rounded-lg">
                   <Mail className="w-6 h-6" />
                 </div>
@@ -39,7 +39,7 @@ export const Contact: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-lg border border-slate-100 hover:border-tiespro-orange/50 transition-colors">
+              <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-lg border border-slate-100 hover:border-tiespro-gold/50 transition-colors">
                 <div className="p-3 bg-tiespro-navy text-white rounded-lg">
                   <MapPin className="w-6 h-6" />
                 </div>
@@ -57,22 +57,22 @@ export const Contact: React.FC = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-slate-400 uppercase">Full Name</label>
-                  <input type="text" className="w-full px-4 py-3 rounded bg-slate-800 border border-slate-700 focus:border-tiespro-orange focus:ring-1 focus:ring-tiespro-orange outline-none transition-all" placeholder="John Doe" />
+                  <input type="text" className="w-full px-4 py-3 rounded bg-slate-800 border border-slate-700 focus:border-tiespro-gold focus:ring-1 focus:ring-tiespro-gold outline-none transition-all" placeholder="John Doe" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-slate-400 uppercase">Phone</label>
-                  <input type="tel" className="w-full px-4 py-3 rounded bg-slate-800 border border-slate-700 focus:border-tiespro-orange focus:ring-1 focus:ring-tiespro-orange outline-none transition-all" placeholder="082 123 4567" />
+                  <input type="tel" className="w-full px-4 py-3 rounded bg-slate-800 border border-slate-700 focus:border-tiespro-gold focus:ring-1 focus:ring-tiespro-gold outline-none transition-all" placeholder="082 123 4567" />
                 </div>
               </div>
 
               <div className="space-y-2">
                 <label className="text-xs font-bold text-slate-400 uppercase">Email Address</label>
-                <input type="email" className="w-full px-4 py-3 rounded bg-slate-800 border border-slate-700 focus:border-tiespro-orange focus:ring-1 focus:ring-tiespro-orange outline-none transition-all" placeholder="john@company.co.za" />
+                <input type="email" className="w-full px-4 py-3 rounded bg-slate-800 border border-slate-700 focus:border-tiespro-gold focus:ring-1 focus:ring-tiespro-gold outline-none transition-all" placeholder="john@company.co.za" />
               </div>
 
               <div className="space-y-2">
                 <label className="text-xs font-bold text-slate-400 uppercase">Training Interest</label>
-                <select className="w-full px-4 py-3 rounded bg-slate-800 border border-slate-700 focus:border-tiespro-orange focus:ring-1 focus:ring-tiespro-orange outline-none transition-all text-slate-300">
+                <select className="w-full px-4 py-3 rounded bg-slate-800 border border-slate-700 focus:border-tiespro-gold focus:ring-1 focus:ring-tiespro-gold outline-none transition-all text-slate-300">
                   <option>Professional Driving</option>
                   <option>Freight Handling & Logistics</option>
                   <option>Supply Chain Management</option>
@@ -83,10 +83,10 @@ export const Contact: React.FC = () => {
 
               <div className="space-y-2">
                 <label className="text-xs font-bold text-slate-400 uppercase">Message</label>
-                <textarea rows={4} className="w-full px-4 py-3 rounded bg-slate-800 border border-slate-700 focus:border-tiespro-orange focus:ring-1 focus:ring-tiespro-orange outline-none transition-all" placeholder="Tell us about your training requirements..."></textarea>
+                <textarea rows={4} className="w-full px-4 py-3 rounded bg-slate-800 border border-slate-700 focus:border-tiespro-gold focus:ring-1 focus:ring-tiespro-gold outline-none transition-all" placeholder="Tell us about your training requirements..."></textarea>
               </div>
 
-              <button className="w-full py-4 bg-tiespro-orange text-white font-bold rounded hover:bg-orange-600 transition-colors shadow-lg uppercase tracking-wide">
+              <button className="w-full py-4 bg-tiespro-gold text-tiespro-navy font-bold rounded hover:bg-yellow-600 hover:text-white transition-colors shadow-lg uppercase tracking-wide">
                 Submit Enquiry
               </button>
             </form>

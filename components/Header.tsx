@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Truck } from 'lucide-react';
+import { Menu, X, GraduationCap } from 'lucide-react';
 
 interface HeaderProps {
   onOpenAdvisor: () => void;
@@ -33,15 +33,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAdvisor }) => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <div className={`p-2 rounded-md bg-tiespro-orange text-white`}>
-             <Truck className="w-6 h-6" />
+          <div className={`p-2 rounded-md bg-tiespro-navy border border-tiespro-gold text-tiespro-gold`}>
+             <GraduationCap className="w-6 h-6" />
           </div>
           <div className="flex flex-col">
-            <span className="text-xl md:text-2xl font-display font-bold text-white tracking-tight uppercase">
-              Tiespro Training Institute
+            <span className="text-xl md:text-2xl font-serif font-bold text-tiespro-gold tracking-tight uppercase">
+              TIESPRO
             </span>
-            <span className="text-[10px] md:text-xs text-slate-400 tracking-widest uppercase">
-              Tiespro 51 (Pty) Ltd
+            <span className="text-[10px] md:text-xs text-slate-300 tracking-widest uppercase font-display">
+              TRAINING INSTITUTE
             </span>
           </div>
         </div>
@@ -52,14 +52,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAdvisor }) => {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-semibold text-slate-300 hover:text-tiespro-orange transition-colors uppercase tracking-wider"
+              className="text-sm font-semibold text-slate-300 hover:text-tiespro-gold transition-colors uppercase tracking-wider"
             >
               {link.name}
             </a>
           ))}
           <button
             onClick={onOpenAdvisor}
-            className="px-5 py-2 bg-tiespro-orange text-white font-bold text-sm uppercase tracking-wide rounded hover:bg-orange-600 transition-colors shadow-lg shadow-orange-900/20"
+            className="px-5 py-2 bg-tiespro-gold text-tiespro-navy font-bold text-sm uppercase tracking-wide rounded hover:bg-yellow-600 hover:text-white transition-colors shadow-lg shadow-yellow-900/20"
           >
             AI Course Advisor
           </button>
@@ -67,7 +67,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAdvisor }) => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="lg:hidden p-2 text-white"
+          className="lg:hidden p-2 text-tiespro-gold"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X /> : <Menu />}
@@ -81,7 +81,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAdvisor }) => {
             <a
               key={link.name}
               href={link.href}
-              className="text-slate-300 font-medium p-3 hover:bg-slate-800 rounded"
+              className="text-slate-300 font-medium p-3 hover:bg-slate-800 hover:text-tiespro-gold rounded"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
@@ -92,7 +92,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAdvisor }) => {
               onOpenAdvisor();
               setIsMobileMenuOpen(false);
             }}
-            className="w-full py-3 bg-tiespro-orange text-white font-bold uppercase rounded"
+            className="w-full py-3 bg-tiespro-gold text-tiespro-navy font-bold uppercase rounded"
           >
             AI Course Advisor
           </button>

@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <Truck className="w-8 h-8 text-tiespro-orange" />
+              <Truck className="w-8 h-8 text-tiespro-gold" />
               <span className="text-2xl font-display font-bold text-white uppercase">Tiespro</span>
             </div>
             <p className="text-sm leading-relaxed mb-6">
@@ -24,20 +24,20 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-bold uppercase tracking-wider text-sm mb-6">Qualifications</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#qualifications" className="hover:text-tiespro-orange transition-colors">Professional Driving</a></li>
-              <li><a href="#qualifications" className="hover:text-tiespro-orange transition-colors">Freight Handling</a></li>
-              <li><a href="#qualifications" className="hover:text-tiespro-orange transition-colors">Supply Chain</a></li>
-              <li><a href="#qualifications" className="hover:text-tiespro-orange transition-colors">Transport Clerk</a></li>
+              <li><a href="#qualifications" className="hover:text-tiespro-gold transition-colors">Professional Driving</a></li>
+              <li><a href="#qualifications" className="hover:text-tiespro-gold transition-colors">Freight Handling</a></li>
+              <li><a href="#qualifications" className="hover:text-tiespro-gold transition-colors">Supply Chain</a></li>
+              <li><a href="#qualifications" className="hover:text-tiespro-gold transition-colors">Transport Clerk</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-white font-bold uppercase tracking-wider text-sm mb-6">Specialized</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#specialized" className="hover:text-tiespro-orange transition-colors">Dangerous Goods</a></li>
-              <li><a href="#specialized" className="hover:text-tiespro-orange transition-colors">First Aid & Fire</a></li>
-              <li><a href="#specialized" className="hover:text-tiespro-orange transition-colors">Assessor Training</a></li>
-              <li><a href="#specialized" className="hover:text-tiespro-orange transition-colors">Technical Trades</a></li>
+              <li><a href="#specialized" className="hover:text-tiespro-gold transition-colors">Dangerous Goods</a></li>
+              <li><a href="#specialized" className="hover:text-tiespro-gold transition-colors">First Aid & Fire</a></li>
+              <li><a href="#specialized" className="hover:text-tiespro-gold transition-colors">Assessor Training</a></li>
+              <li><a href="#specialized" className="hover:text-tiespro-gold transition-colors">Technical Trades</a></li>
             </ul>
           </div>
 
@@ -46,11 +46,11 @@ export const Footer: React.FC = () => {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                   <span className="text-white font-bold">T:</span>
-                  <a href={`tel:${CONTACT_INFO.phone}`} className="hover:text-tiespro-orange transition-colors">{CONTACT_INFO.phone}</a>
+                  <a href={`tel:${CONTACT_INFO.phone}`} className="hover:text-tiespro-gold transition-colors">{CONTACT_INFO.phone}</a>
               </li>
               <li className="flex items-start gap-3">
                   <span className="text-white font-bold">E:</span>
-                  <a href={`mailto:${CONTACT_INFO.email}`} className="hover:text-tiespro-orange transition-colors">{CONTACT_INFO.email}</a>
+                  <a href={`mailto:${CONTACT_INFO.email}`} className="hover:text-tiespro-gold transition-colors">{CONTACT_INFO.email}</a>
               </li>
               <li className="text-slate-500 text-xs leading-relaxed">
                   {CONTACT_INFO.address}

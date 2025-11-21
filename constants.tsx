@@ -1,5 +1,5 @@
 import React from 'react';
-import { Truck, Package, Map, Users, FileText, ShieldCheck, Anchor, Bus, Car } from 'lucide-react';
+import { Truck, Map, Users, ShieldCheck } from 'lucide-react';
 import { Qualification, Service, Stat, Testimonial } from './types';
 
 // Core Qualifications Data
@@ -91,7 +91,7 @@ export const SPECIALIZED_TRAINING: Service[] = [
       'Health & Safety in the Workplace',
       'Convey Dangerous Goods'
     ],
-    icon: <ShieldCheck className="w-6 h-6 text-tiespro-orange" />
+    icon: <ShieldCheck className="w-6 h-6 text-tiespro-gold" />
   },
   {
     id: 'skills-programs',
@@ -101,7 +101,7 @@ export const SPECIALIZED_TRAINING: Service[] = [
       'Project Management (Generic)',
       'Conflict, Time & Stress Management'
     ],
-    icon: <Users className="w-6 h-6 text-tiespro-orange" />
+    icon: <Users className="w-6 h-6 text-tiespro-gold" />
   },
   {
     id: 'technical-trades',
@@ -111,7 +111,7 @@ export const SPECIALIZED_TRAINING: Service[] = [
       'Bricklaying, Tiling & Carpentry',
       'Communication & Numeracy (NQF 1-4)'
     ],
-    icon: <Map className="w-6 h-6 text-tiespro-orange" />
+    icon: <Map className="w-6 h-6 text-tiespro-gold" />
   }
 ];
 

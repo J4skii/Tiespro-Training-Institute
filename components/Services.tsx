@@ -13,7 +13,7 @@ export const Services: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-tiespro-orange font-bold tracking-widest uppercase text-sm mb-2">Accredited Courses</h2>
+          <h2 className="text-tiespro-gold font-bold tracking-widest uppercase text-sm mb-2">Accredited Courses</h2>
           <h3 className="text-3xl md:text-4xl font-display font-bold text-tiespro-navy mb-6">Core Qualifications</h3>
           <p className="text-slate-600">
             Fully accredited interventions designed to close skills gaps and ensure compliance in the Transport & Logistics sector.
@@ -40,7 +40,7 @@ export const Services: React.FC = () => {
                                 NQF {course.nqfLevel}
                             </span>
                         </div>
-                        <h5 className="text-lg font-bold text-tiespro-navy mb-3 group-hover:text-tiespro-orange transition-colors">
+                        <h5 className="text-lg font-bold text-tiespro-navy mb-3 group-hover:text-tiespro-gold transition-colors">
                             {course.title}
                         </h5>
                         <p className="text-slate-600 text-sm leading-relaxed mb-4">
@@ -87,7 +87,7 @@ export const Services: React.FC = () => {
 
         {/* Specialized Training Section */}
         <div id="specialized" className="bg-tiespro-navy rounded-2xl p-8 md:p-12 text-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-tiespro-orange opacity-10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-tiespro-gold opacity-10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
             <div className="relative z-10">
                 <div className="text-center mb-12">
                     <h3 className="text-3xl font-display font-bold mb-4">Specialized Training & Services</h3>
@@ -99,10 +99,10 @@ export const Services: React.FC = () => {
                 <div className="grid md:grid-cols-3 gap-8">
                     {SPECIALIZED_TRAINING.map((category) => (
                         <div key={category.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-colors">
-                            <div className="mb-4 p-3 bg-tiespro-orange/20 rounded-lg inline-block">
+                            <div className="mb-4 p-3 bg-tiespro-gold/20 rounded-lg inline-block">
                                 {category.icon}
                             </div>
-                            <h4 className="text-xl font-bold mb-4 text-tiespro-orange">{category.title}</h4>
+                            <h4 className="text-xl font-bold mb-4 text-tiespro-gold">{category.title}</h4>
                             <ul className="space-y-3">
                                 {category.items.map((item, idx) => (
                                     <li key={idx} className="flex items-start gap-2 text-sm text-slate-300">

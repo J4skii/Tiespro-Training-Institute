@@ -35,7 +35,7 @@ const App: React.FC = () => {
           <div className="container mx-auto px-4 relative z-10">
              <div className="max-w-4xl mx-auto text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                  <span className="text-tiespro-orange">Training Needs</span> Analysis
+                  <span className="text-tiespro-gold">Training Needs</span> Analysis
                 </h2>
                 <p className="text-slate-400 text-lg max-w-2xl mx-auto">
                   Not sure which accredited course fits your employees? Use our AI-powered consultant to find the perfect curriculum based on your operational requirements.

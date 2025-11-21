@@ -1,5 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, CheckCircle, Shield } from 'lucide-react';
+import { 
+  ArrowRight, 
+  CheckCircle, 
+  Shield, 
+  GraduationCap, 
+  Car, 
+  Truck, 
+  Landmark, 
+  TrainFront, 
+  Tractor, 
+  Bus, 
+  BookOpen, 
+  Plane, 
+  Briefcase
+} from 'lucide-react';
 
 interface HeroProps {
   onCtaClick: () => void;
@@ -43,42 +57,77 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
         <img
           src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
           alt="Professional Truck Driver and Logistics Fleet"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-10"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-tiespro-navy via-tiespro-navy/95 to-tiespro-navy/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-tiespro-navy via-tiespro-navy/90 to-tiespro-navy/80"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 grid lg:grid-cols-2 gap-12 items-center h-full">
-        <div className="space-y-8 py-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-tiespro-green/30 bg-tiespro-green/10 text-tiespro-green text-xs font-bold uppercase tracking-wider">
-            <Shield className="w-3 h-3" />
-            Est. 2005 | TETA & QCTO Accredited
-          </div>
-          
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-[0.95]">
-            DRIVING <br />
-            <span className="text-tiespro-orange">LOGISTICS</span> <br />
-            EXCELLENCE
-          </h1>
-          
-          <p className="text-slate-400 text-lg md:text-xl leading-relaxed max-w-xl border-l-4 border-tiespro-orange pl-6">
-            Almost two decades of empowering the Transport Industry through world-class skills development. From professional driving to supply chain management.
-          </p>
+      <div className="container mx-auto px-4 relative z-10 h-full py-12 flex flex-col items-center justify-center">
+        
+        {/* --- BRAND LOGO RECONSTRUCTION START --- */}
+        {/* Changed to bg-white so the Blue text in the logo is visible against the Blue Hero background */}
+        <div className="w-full max-w-4xl bg-white rounded-2xl p-8 md:p-12 mb-12 text-center shadow-2xl relative overflow-hidden">
+            
+            {/* 1. Cap Icon */}
+            <div className="relative inline-block mb-2">
+                <GraduationCap className="w-16 h-16 md:w-20 md:h-20 text-tiespro-navy" />
+            </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <a href="#qualifications" className="px-8 py-4 bg-tiespro-orange text-white font-bold rounded hover:bg-orange-600 transition-all flex items-center justify-center gap-2 group shadow-lg shadow-orange-900/20 uppercase tracking-wide text-sm">
+            {/* 2. Main Text */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-tiespro-gold tracking-wider mb-0 drop-shadow-sm leading-none">
+                TIESPRO
+            </h1>
+
+            {/* 3. Subtitle */}
+            <h2 className="text-xl md:text-3xl font-display font-bold text-tiespro-gold uppercase tracking-[0.2em] mb-6 inline-block pb-2">
+                TRAINING INSTITUTE
+            </h2>
+
+            {/* 4. Slogan Bar */}
+            <div className="w-full max-w-2xl mx-auto flex items-center gap-4 mb-6 opacity-100">
+                <div className="h-[3px] bg-tiespro-navy flex-grow"></div>
+                <span className="text-tiespro-navy px-2 text-xs md:text-sm font-bold font-serif italic whitespace-nowrap">
+                    Journey of excellence since 2005
+                </span>
+                <div className="h-[3px] bg-tiespro-navy flex-grow"></div>
+            </div>
+
+            {/* 5. Icon Strip */}
+            <div className="flex flex-wrap justify-center items-center gap-3 md:gap-6 text-tiespro-gold mb-6">
+                <Car className="w-6 h-6 md:w-8 md:h-8" />
+                <Briefcase className="w-6 h-6 md:w-8 md:h-8" />
+                <Truck className="w-6 h-6 md:w-8 md:h-8" />
+                <Landmark className="w-6 h-6 md:w-8 md:h-8" />
+                <TrainFront className="w-6 h-6 md:w-8 md:h-8" />
+                <Tractor className="w-6 h-6 md:w-8 md:h-8" />
+                <GraduationCap className="w-6 h-6 md:w-8 md:h-8" />
+                <Bus className="w-6 h-6 md:w-8 md:h-8" />
+                <BookOpen className="w-6 h-6 md:w-8 md:h-8" />
+                <Plane className="w-6 h-6 md:w-8 md:h-8" />
+            </div>
+
+            {/* 6. Tagline under icons */}
+            <p className="text-tiespro-navy font-bold font-serif text-lg md:text-2xl">
+                Equipping The Nation Through Education
+            </p>
+        </div>
+        {/* --- BRAND LOGO RECONSTRUCTION END --- */}
+
+        
+        <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <a href="#qualifications" className="px-8 py-4 bg-tiespro-gold text-tiespro-navy font-bold rounded hover:bg-yellow-600 hover:text-white transition-all flex items-center justify-center gap-2 group shadow-lg shadow-yellow-900/20 uppercase tracking-wide text-sm">
               Explore Qualifications
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <button 
               onClick={onCtaClick}
-              className="px-8 py-4 border border-slate-600 text-slate-300 font-bold rounded hover:bg-white/5 transition-all uppercase tracking-wide text-sm"
+              className="px-8 py-4 border-2 border-tiespro-gold text-tiespro-gold font-bold rounded hover:bg-tiespro-gold/10 transition-all uppercase tracking-wide text-sm"
             >
               Consult AI Advisor
             </button>
-          </div>
+        </div>
 
-          <div className="pt-6 flex flex-wrap gap-x-6 gap-y-2 text-slate-500 text-sm font-medium">
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-slate-300 text-sm font-medium">
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-tiespro-green" />
               <span>100% Black Owned</span>
@@ -91,59 +140,47 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
               <CheckCircle className="w-4 h-4 text-tiespro-green" />
               <span>Investors in People</span>
             </div>
-          </div>
         </div>
-
-        {/* Right Side Graphic - Abstract representation of Logistics/Structure */}
-        <div className="hidden lg:block relative h-full min-h-[300px] w-full">
-            {/* Image Container - Positioned Higher */}
-            <div className="absolute right-8 top-12 w-full max-w-md">
-                 <div className="relative z-10 rounded-lg overflow-hidden shadow-2xl border-4 border-white/10">
-                    <img 
-                        src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" 
-                        alt="Warehouse Operations" 
-                        className="w-full h-auto"
-                    />
-                 </div>
-            </div>
-                 
-            /* {/* Animated Stats Panel positioned at the BOTTOM //}
-            <div className="absolute bottom-0 right-0 z-20 bg-tiespro-navy/95 backdrop-blur-md border border-slate-700 p-8 rounded-xl shadow-2xl w-[480px] mb-8">
-                <div className="grid grid-cols-2 gap-x-8 gap-y-8">
-                    <div className="space-y-1">
-                            <p className="text-tiespro-orange font-display font-bold text-4xl">
-                            <Counter end={12} suffix="+" />
-                            </p>
-                            <p className="text-white font-bold uppercase text-[10px] tracking-widest">Expert Facilitators</p>
-                            <p className="text-slate-500 text-xs">Accredited & Industry Proven</p>
-                    </div>
-                    <div className="space-y-1">
-                            <p className="text-tiespro-orange font-display font-bold text-4xl">
-                            <Counter end={15} suffix="k+" />
-                            </p>
-                            <p className="text-white font-bold uppercase text-[10px] tracking-widest">Learners Trained</p>
-                            <p className="text-slate-500 text-xs">Across SADC Region</p>
-                    </div>
-                    <div className="space-y-1">
-                            <p className="text-tiespro-orange font-display font-bold text-4xl">
-                            <Counter end={20} suffix="+" />
-                            </p>
-                            <p className="text-white font-bold uppercase text-[10px] tracking-widest">Accredited Courses</p>
-                            <p className="text-slate-500 text-xs">TETA & QCTO Aligned</p>
-                    </div>
-                    <div className="space-y-1">
-                            <p className="text-tiespro-orange font-display font-bold text-4xl">
-                            <Counter end={98} suffix="%" />
-                            </p>
-                            <p className="text-white font-bold uppercase text-[10px] tracking-widest">Pass Rate</p>
-                            <p className="text-slate-500 text-xs">Commitment to Competence</p>
-                    </div>
+        
+        {/* 
+          STATS BLOCK - COMMENTED OUT AS REQUESTED 
+          (Ready for re-activation with corrected Gold styling)
+        */}
+        {/* 
+        <div className="absolute bottom-0 right-0 z-20 bg-tiespro-navy/95 backdrop-blur-md border border-slate-700 p-6 md:p-8 rounded-tl-3xl shadow-2xl w-full max-w-[600px]">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="space-y-1 text-center md:text-left">
+                        <p className="text-tiespro-gold font-display font-bold text-3xl md:text-4xl">
+                        <Counter end={12} suffix="+" />
+                        </p>
+                        <p className="text-white font-bold uppercase text-[10px] tracking-widest">Expert Facilitators</p>
+                        <p className="text-slate-500 text-[10px]">Accredited</p>
                 </div>
-            </div> 
-            
-            {/* Background graphic elements */}
-            <div className="absolute top-0 right-12 w-64 h-64 bg-tiespro-orange/10 rounded-full blur-3xl"></div>
-        </div>
+                <div className="space-y-1 text-center md:text-left">
+                        <p className="text-tiespro-gold font-display font-bold text-3xl md:text-4xl">
+                        <Counter end={15} suffix="k+" />
+                        </p>
+                        <p className="text-white font-bold uppercase text-[10px] tracking-widest">Learners Trained</p>
+                        <p className="text-slate-500 text-[10px]">SADC Region</p>
+                </div>
+                <div className="space-y-1 text-center md:text-left">
+                        <p className="text-tiespro-gold font-display font-bold text-3xl md:text-4xl">
+                        <Counter end={20} suffix="+" />
+                        </p>
+                        <p className="text-white font-bold uppercase text-[10px] tracking-widest">Accredited Courses</p>
+                        <p className="text-slate-500 text-[10px]">TETA & QCTO</p>
+                </div>
+                <div className="space-y-1 text-center md:text-left">
+                        <p className="text-tiespro-gold font-display font-bold text-3xl md:text-4xl">
+                        <Counter end={98} suffix="%" />
+                        </p>
+                        <p className="text-white font-bold uppercase text-[10px] tracking-widest">Pass Rate</p>
+                        <p className="text-slate-500 text-[10px]">Excellence</p>
+                </div>
+            </div>
+        </div> 
+        */}
+        
       </div>
     </section>
   );

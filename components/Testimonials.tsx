@@ -7,21 +7,21 @@ export const Testimonials: React.FC = () => {
     <section id="testimonials" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-           <h2 className="text-tiespro-teal font-bold tracking-widest uppercase text-sm mb-2">Success Stories</h2>
+           <h2 className="text-tiespro-gold font-bold tracking-widest uppercase text-sm mb-2">Success Stories</h2>
            <h3 className="text-3xl md:text-4xl font-bold text-tiespro-navy">Trusted by Industry Leaders</h3>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {TESTIMONIALS.map((item) => (
             <div key={item.id} className="bg-slate-50 p-8 rounded-2xl relative hover:-translate-y-1 transition-transform duration-300">
-              <Quote className="absolute top-6 right-6 w-10 h-10 text-tiespro-teal/20" />
+              <Quote className="absolute top-6 right-6 w-10 h-10 text-tiespro-gold/20" />
               <p className="text-slate-600 italic mb-8 relative z-10">"{item.content}"</p>
               
               <div className="flex items-center gap-4">
                 <img 
                   src={item.image} 
                   alt={item.name} 
-                  className="w-12 h-12 rounded-full object-cover ring-2 ring-tiespro-teal/30"
+                  className="w-12 h-12 rounded-full object-cover ring-2 ring-tiespro-gold/30"
                 />
                 <div>
                   <h4 className="font-bold text-tiespro-navy text-sm">{item.name}</h4>
