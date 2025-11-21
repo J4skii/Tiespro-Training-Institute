@@ -1,9 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle, Shield } from 'lucide-react';
 
 interface HeroProps {
   onCtaClick: () => void;
 }
+
+const Counter = ({ end, duration = 2000, suffix = '' }: { end: number, duration?: number, suffix?: string }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startTime: number | null = null;
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = currentTime - startTime;
+      
+      // Ease out quart function for smooth animation
+      const easeOutQuart = (x: number): number => 1 - Math.pow(1 - x, 4);
+      
+      const percentage = Math.min(progress / duration, 1);
+      const easedProgress = easeOutQuart(percentage);
+      
+      setCount(Math.floor(easedProgress * end));
+
+      if (progress < duration) {
+        requestAnimationFrame(animate);
+      } else {
+        setCount(end);
+      }
+    };
+    requestAnimationFrame(animate);
+  }, [end, duration]);
+
+  return <span>{count}{suffix}</span>;
+};
 
 export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
   return (
@@ -19,8 +48,8 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
         <div className="absolute inset-0 bg-gradient-to-r from-tiespro-navy via-tiespro-navy/95 to-tiespro-navy/40"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-        <div className="space-y-8">
+      <div className="container mx-auto px-4 relative z-10 grid lg:grid-cols-2 gap-12 items-center h-full">
+        <div className="space-y-8 py-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-tiespro-green/30 bg-tiespro-green/10 text-tiespro-green text-xs font-bold uppercase tracking-wider">
             <Shield className="w-3 h-3" />
             Est. 2005 | TETA & QCTO Accredited
@@ -66,8 +95,9 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
         </div>
 
         {/* Right Side Graphic - Abstract representation of Logistics/Structure */}
-        <div className="hidden lg:block relative h-[600px]">
-            <div className="absolute right-0 top-10 w-full max-w-md">
+        <div className="hidden lg:block relative h-full min-h-[300px] w-full">
+            {/* Image Container - Positioned Higher */}
+            <div className="absolute right-8 top-12 w-full max-w-md">
                  <div className="relative z-10 rounded-lg overflow-hidden shadow-2xl border-4 border-white/10">
                     <img 
                         src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" 
@@ -75,13 +105,42 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
                         className="w-full h-auto"
                     />
                  </div>
-                 <div className="absolute -bottom-12 -left-12 z-20 bg-tiespro-navy border border-slate-700 p-6 rounded-lg shadow-xl max-w-xs">
-                    <p className="text-tiespro-orange font-display font-bold text-4xl mb-1">8+</p>
-                    <p className="text-white font-bold uppercase text-sm">Registered Assessors</p>
-                    <div className="w-12 h-1 bg-tiespro-green mt-4 mb-2"></div>
-                    <p className="text-slate-400 text-xs">Industry experienced facilitators ensuring quality outcomes.</p>
-                 </div>
             </div>
+                 
+            /* {/* Animated Stats Panel positioned at the BOTTOM //}
+            <div className="absolute bottom-0 right-0 z-20 bg-tiespro-navy/95 backdrop-blur-md border border-slate-700 p-8 rounded-xl shadow-2xl w-[480px] mb-8">
+                <div className="grid grid-cols-2 gap-x-8 gap-y-8">
+                    <div className="space-y-1">
+                            <p className="text-tiespro-orange font-display font-bold text-4xl">
+                            <Counter end={12} suffix="+" />
+                            </p>
+                            <p className="text-white font-bold uppercase text-[10px] tracking-widest">Expert Facilitators</p>
+                            <p className="text-slate-500 text-xs">Accredited & Industry Proven</p>
+                    </div>
+                    <div className="space-y-1">
+                            <p className="text-tiespro-orange font-display font-bold text-4xl">
+                            <Counter end={15} suffix="k+" />
+                            </p>
+                            <p className="text-white font-bold uppercase text-[10px] tracking-widest">Learners Trained</p>
+                            <p className="text-slate-500 text-xs">Across SADC Region</p>
+                    </div>
+                    <div className="space-y-1">
+                            <p className="text-tiespro-orange font-display font-bold text-4xl">
+                            <Counter end={20} suffix="+" />
+                            </p>
+                            <p className="text-white font-bold uppercase text-[10px] tracking-widest">Accredited Courses</p>
+                            <p className="text-slate-500 text-xs">TETA & QCTO Aligned</p>
+                    </div>
+                    <div className="space-y-1">
+                            <p className="text-tiespro-orange font-display font-bold text-4xl">
+                            <Counter end={98} suffix="%" />
+                            </p>
+                            <p className="text-white font-bold uppercase text-[10px] tracking-widest">Pass Rate</p>
+                            <p className="text-slate-500 text-xs">Commitment to Competence</p>
+                    </div>
+                </div>
+            </div> 
+            
             {/* Background graphic elements */}
             <div className="absolute top-0 right-12 w-64 h-64 bg-tiespro-orange/10 rounded-full blur-3xl"></div>
         </div>

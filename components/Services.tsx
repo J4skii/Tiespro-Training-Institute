@@ -46,9 +46,7 @@ export const Services: React.FC = () => {
                         <p className="text-slate-600 text-sm leading-relaxed mb-4">
                             {course.description}
                         </p>
-                        <div className="flex items-center text-tiespro-orange text-sm font-bold mt-auto cursor-pointer">
-                            View Syllabus <ArrowRight className="w-4 h-4 ml-1" />
-                        </div>
+                        
                     </div>
                 ))}
             </div>
