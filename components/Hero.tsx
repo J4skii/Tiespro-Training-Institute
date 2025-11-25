@@ -122,7 +122,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
               onClick={onCtaClick}
               className="px-8 py-4 border-2 border-tiespro-gold text-tiespro-gold font-bold rounded hover:bg-tiespro-gold/10 transition-all uppercase tracking-wide text-sm"
             >
-              Consult AI Advisor
+              Consult Advisor
             </button>
         </div>
 

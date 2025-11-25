@@ -61,7 +61,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAdvisor }) => {
             onClick={onOpenAdvisor}
             className="px-5 py-2 bg-tiespro-gold text-tiespro-navy font-bold text-sm uppercase tracking-wide rounded hover:bg-yellow-600 hover:text-white transition-colors shadow-lg shadow-yellow-900/20"
           >
-            AI Course Advisor
+            Course Advisor
           </button>
         </nav>
 
@@ -94,7 +94,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAdvisor }) => {
             }}
             className="w-full py-3 bg-tiespro-gold text-tiespro-navy font-bold uppercase rounded"
           >
-            AI Course Advisor
+            Course Advisor
           </button>
         </div>
       )}

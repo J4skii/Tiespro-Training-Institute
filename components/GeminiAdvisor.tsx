@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sparkles, Send, Loader2, Bot } from 'lucide-react';
+import { Sparkles, Send, Loader2, Search } from 'lucide-react';
 import { getTrainingRecommendations } from '../services/geminiService';
 import { LoadingState } from '../types';
 
@@ -25,11 +25,11 @@ export const GeminiAdvisor: React.FC = () => {
       {/* Header */}
       <div className="bg-tiespro-navy p-6 border-b border-white/5 flex items-center gap-3">
         <div className="p-2 bg-tiespro-gold/20 rounded-lg">
-          <Bot className="w-6 h-6 text-tiespro-gold" />
+          <Search className="w-6 h-6 text-tiespro-gold" />
         </div>
         <div>
-          <h3 className="text-white font-bold text-lg">Tiespro Smart Advisor</h3>
-          <p className="text-slate-400 text-sm">Powered by Gemini 2.5 Flash</p>
+          <h3 className="text-white font-bold text-lg">Tiespro Course Advisor</h3>
+          <p className="text-slate-400 text-sm">Search our accredited qualification database</p>
         </div>
       </div>
 
@@ -40,7 +40,7 @@ export const GeminiAdvisor: React.FC = () => {
           <div className="flex flex-col items-center justify-center h-full text-slate-400 py-12">
             <Sparkles className="w-12 h-12 mb-4 text-tiespro-gold opacity-50" />
             <p className="text-center max-w-md">
-              Tell us about your team's challenges (e.g., "My sales team is struggling to close deals" or "We need better conflict resolution").
+              Enter keywords to find courses (e.g., "Truck Driver", "Supply Chain", or "Freight Handling").
             </p>
           </div>
         )}
@@ -48,7 +48,7 @@ export const GeminiAdvisor: React.FC = () => {
         {status === LoadingState.LOADING && (
           <div className="flex flex-col items-center justify-center py-12">
             <Loader2 className="w-10 h-10 text-tiespro-gold animate-spin mb-4" />
-            <p className="text-slate-300 animate-pulse">Analyzing your requirements...</p>
+            <p className="text-slate-300 animate-pulse">Searching catalogue...</p>
           </div>
         )}
 
@@ -68,7 +68,7 @@ export const GeminiAdvisor: React.FC = () => {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Describe your training needs..."
+            placeholder="Search for qualifications..."
             className="w-full bg-slate-800/50 border border-slate-600 text-white placeholder-slate-400 rounded-xl py-4 pl-4 pr-14 focus:outline-none focus:ring-2 focus:ring-tiespro-gold transition-all"
           />
           <button
