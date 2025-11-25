@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
               <Truck className="w-8 h-8 text-tiespro-gold" />
-              <span className="text-2xl font-display font-bold text-white uppercase">Tiespro</span>
+              <span className="text-2xl font-sung font-bold text-white uppercase">Tiespro</span>
             </div>
             <p className="text-sm leading-relaxed mb-6">
               Tiespro Training Institute is a 100% Black Owned, accredited skills development provider for the Transport and Logistics industry.

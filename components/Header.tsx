@@ -37,7 +37,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAdvisor }) => {
              <GraduationCap className="w-6 h-6" />
           </div>
           <div className="flex flex-col">
-            <span className="text-xl md:text-2xl font-serif font-bold text-tiespro-gold tracking-tight uppercase">
+            <span className="text-xl md:text-2xl font-sung font-bold text-tiespro-gold tracking-tight uppercase">
               TIESPRO
             </span>
             <span className="text-[10px] md:text-xs text-slate-300 tracking-widest uppercase font-display">
