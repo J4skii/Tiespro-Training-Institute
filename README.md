@@ -1,5 +1,6 @@
 
-🎓 Tiespro Training Institute
+🎓 Tiespro Training Institute<img width="773" height="247" alt="Screenshot 2025-11-21 115205" src="https://github.com/user-attachments/assets/789de207-854f-4543-afea-7c3a366de59e" />
+
 
 Building Industry-Ready Skills for South Africa’s Future Workforce
 A modern, responsive landing page for Tiespro Training Institute, showcasing accredited skills development, occupational qualifications, and workforce enablement aligned with national transformation objectives.
